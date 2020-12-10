@@ -34,10 +34,4 @@ router
       });
   });
 
-router.route("/:id").get((req, res) => {
-  Users.where("id", req.params.id)
-    .fetch({ withRelated: ["bookings"] })
-    .then((bookings) => {
-      res.status(200).json(bookings);
-    });
-});
+module.exports = router;

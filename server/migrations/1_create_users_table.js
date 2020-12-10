@@ -6,8 +6,8 @@ exports.up = (knex) => {
     table.string("regNumber").notNullable();
     table.string("address").notNullable();
     table.string("phone").notNullable();
-    table.json("email").notNullable();
-    table.json("password").notNullable();
+    table.string("email").notNullable();
+    table.string("password").notNullable();
     table.timestamp("updated_at").defaultTo(knex.fn.now());
   });
 };

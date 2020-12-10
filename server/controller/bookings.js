@@ -11,7 +11,7 @@ const getBookings = (req, res) => {
 //get bookings from an specific user
 const getUserBookings = (req, res) => {
   Bookings.where({ id: req.params.id })
-    .fetchAll({ withRelated: ["users"] })
+    .fetch({ withRelated: ["users"] })
     .then((bookings) => {
       res.status(200).json({ bookings });
     });
@@ -19,20 +19,18 @@ const getUserBookings = (req, res) => {
 
 //post newBooking
 const newBooking = (req, res) => {
-  Bookings.where("id", req.params.id)
-    .fetch()
-    .then((booking) => {
-      booking.save({
-        date: req.body.date ? req.body.date : booking.date,
-        status: req.body.status ? req.body.status : booking.status,
-      });
-    })
+  new Bookings({
+    users_id: req.params.id,
+    date: req.body.date,
+    description: req.body.description,
+  })
+    .save()
     .then((updatedBooking) => {
       res.status(200).json({ updatedBooking });
     });
 };
-module.exports({
+module.exports = {
   getBookings,
   getUserBookings,
   newBooking,
-});
+};

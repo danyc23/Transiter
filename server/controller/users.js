@@ -10,7 +10,7 @@ const getUsers = (req, res) => {
 //get user with its bookings
 const getUserWithBookings = (req, res) => {
   Users.where({ id: req.params.id })
-    .fetchAll({ withRelated: ["bookings"] })
+    .fetch({ withRelated: ["bookings"] })
     .then((user) => {
       res.status(200).json({ user });
     });

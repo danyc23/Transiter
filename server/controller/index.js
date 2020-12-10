@@ -1,5 +1,5 @@
-import { getUsers, getUserWithBookings, createNewUser } from "./users";
-import { getBookings, getUserBookings, newBooking } from "./bookings";
+const { getUsers, getUserWithBookings, createNewUser } = require("./users");
+const { getBookings, getUserBookings, newBooking } = require("./bookings");
 
 module.exports = {
   getUsers,

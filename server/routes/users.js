@@ -1,5 +1,5 @@
 const express = require("express");
-const controller = require("../controller/index");
+const controller = require("../controller/users");
 const router = express.Router();
 
 //get all users
@@ -8,6 +8,6 @@ router.route("/").get(controller.getUsers);
 router.route("/:id").get(controller.getUserWithBookings);
 
 //create a new user
-router.route("/").post(controller.newUser);
+router.route("/").post(controller.createNewUser);
 
 module.exports = router;

@@ -1,37 +1,14 @@
 const express = require("express");
+const controller = require("../controller/index");
+const router = express.Router();
 
-const Bookings = require("../models/bookings");
-const Users = require("../models/users");
+//get all bookings
+router.route("/").get(controller.getBookings);
 
-const router = express.router();
+//get bookings from user
+router.route("/:id").get(controller.getUserBookings);
 
-router
-  .route("/")
-  .get((req, res) => {
-    Bookings.where(req.query)
-      .fetchAll({ withRelated: ["users"] })
-      .then((bookings) => {
-        res.status(200).json({ bookings });
-      });
-  })
-  .post((req, res) => {
-    new Booking({
-      dates: req.body.dates,
-      description: req.body.description,
-    });
-  })
-  .put((req, res) => {
-    Bookings.where("id", req.params.id)
-      .fetch()
-      .then((booking) => {
-        booking.save({
-          date: req.body.date ? req.body.date : booking.date,
-          status: req.body.status ? req.body.status : booking.status,
-        });
-      })
-      .then((updatedBooking) => {
-        res.status(200).json({ updatedBooking });
-      });
-  });
+//create a new booking
+router.route("/").post(controller.newBooking);
 
 module.exports = router;

@@ -21,7 +21,7 @@ exports.seed = function (knex) {
     })
     .then((userIds) => {
       const bookingsDataWithUsersId = bookingsData.map((booking) => {
-        booking.users_id = userIds[Math.floor(Math.random() * userIds.length)];
+        booking.user_id = userIds[Math.floor(Math.random() * userIds.length)];
         return booking;
       });
       return knex("bookings").insert(bookingsDataWithUsersId);

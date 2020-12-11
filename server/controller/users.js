@@ -40,7 +40,7 @@ const createNewUser = (req, res) => {
   ) {
     res.json({ error: "Please fill all the spaces" });
   } else {
-    new User({
+    new Users({
       companyName,
       country,
       regNumber,

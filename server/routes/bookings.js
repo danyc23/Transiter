@@ -9,6 +9,6 @@ router.route("/").get(controller.getBookings);
 router.route("/:id").get(controller.getUserBookings);
 
 //create a new booking
-router.route("/").post(controller.newBooking);
+router.route("/:id").post(controller.newBooking);
 
 module.exports = router;

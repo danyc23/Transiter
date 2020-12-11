@@ -20,7 +20,7 @@ const getUserBookings = (req, res) => {
 //post newBooking
 const newBooking = (req, res) => {
   new Bookings({
-    users_id: req.params.id,
+    user_id: req.params.id,
     date: req.body.date,
     description: req.body.description,
   })

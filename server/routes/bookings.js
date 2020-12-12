@@ -1,6 +1,7 @@
 const express = require("express");
 const controller = require("../controller/bookings");
 const router = express.Router();
+const middleware = require("../middleware/auth");
 
 //get all bookings
 router.route("/").get(controller.getBookings);

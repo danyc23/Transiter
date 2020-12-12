@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <nav className="navbar">
@@ -10,8 +11,13 @@ function Navbar() {
         <p className="navbar-options__item">Contact</p>
       </section>
       <section className="navbar-btn">
-        <button className="navbar-btn__login">Login</button>
-        <button className="navbar-btn__signup">Sign up</button>
+        <Link to="./login">
+          <button className="navbar-btn__login">Login</button>
+        </Link>
+
+        <Link to="register">
+          <button className="navbar-btn__register">Register</button>
+        </Link>
       </section>
     </nav>
   );

@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model bookings {
+  id          Int       @id @default(autoincrement())
+  user_id     Int?
+  date        String
+  description String
+  updated_at  DateTime? @default(now())
+  users       users?    @relation(fields: [user_id], references: [id])
+
+  @@index([user_id], name: "bookings_users_id_foreign")
+}
+
+model knex_migrations {
+  id             Int       @id @default(autoincrement())
+  name           String?
+  batch          Int?
+  migration_time DateTime?
+}
+
+model knex_migrations_lock {
+  index     Int  @id @default(autoincrement())
+  is_locked Int?
+}
+
+model users {
+  id          Int        @id @default(autoincrement())
+  companyName String
+  country     String
+  regNumber   String
+  address     String
+  phone       String
+  email       String     @unique
+  password    String
+  updated_at  DateTime?  @default(now())
+  bookings    bookings[]
+}

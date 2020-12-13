@@ -1,0 +1,33 @@
+.hero {
+  height: 27rem;
+  width: 100%;
+  background: url("../assets/chris-pagan-sfjS-FglvU4-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
+  &-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  &-title {
+    font-size: 38px;
+    line-height: 38px;
+    padding-top: 40px;
+    color: #00233d;
+    margin-bottom: 6rem;
+  }
+  &-text {
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: #fff;
+    font-weight: bolder;
+  }
+  &-btn {
+    padding: 0.7rem 2rem;
+    color: #fff;
+    background-color: $blue;
+    font-weight: 100;
+    border-radius: 3px;
+    border: none;
+  }
+}

@@ -4,7 +4,7 @@ import App from "./App";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./components/Login";
 import Register from "./components/Register";
-import Profile from "./components/Profile";
+import Profile from "./pages/Profile";
 
 ReactDOM.render(
   <React.StrictMode>

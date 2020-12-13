@@ -1,0 +1,69 @@
+@import "../partials//variables";
+
+.footer {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-wrap: wrap;
+  &-subscription {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 1.5rem;
+    &__title {
+      margin-bottom: 0.5rem;
+      color: $blue;
+    }
+    &__text {
+      margin-bottom: 0.5rem;
+      color: $black;
+      font-family: helvetica;
+    }
+    &__input {
+      margin-bottom: 0.5rem;
+      color: $blue;
+      font-family: helvetica;
+      height: 1.6rem;
+    }
+    &-btn {
+      margin-left: 0.5rem;
+      background: $blue;
+      color: #fff;
+      padding: 0.3rem 0.7rem;
+      border: none;
+      border-radius: 3px;
+    }
+  }
+  &-social-media {
+    display: flex;
+    &__item {
+      margin-right: 3rem;
+      color: $blue;
+      font-family: helvetica;
+    }
+  }
+  &-commitment {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    &__title {
+      margin-bottom: 0.5rem;
+      color: $blue;
+      font-family: helvetica;
+    }
+    &__text {
+      margin-bottom: 0.5rem;
+      color: $black;
+      font-family: helvetica;
+    }
+  }
+  &-navigate {
+    margin: 0.5rem 1rem;
+    &__title {
+      margin-bottom: 0.5rem;
+      color: $blue;
+      font-family: helvetica;
+    }
+    &__item {
+      color: $black;
+    }
+  }
+}

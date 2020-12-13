@@ -1,0 +1,203 @@
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5rem 1rem;
+}
+
+.navbar-options {
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #00233d;
+}
+
+.navbar-options__item {
+  margin-right: 0.2rem;
+  font-weight: 500;
+}
+
+.navbar-logo {
+  background: url("../assets/logo1.JPG");
+  height: 2rem;
+  width: 7rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero {
+  height: 27rem;
+  width: 100%;
+  background: url("../assets/chris-pagan-sfjS-FglvU4-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.hero-container {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.hero-title {
+  font-size: 38px;
+  line-height: 38px;
+  padding-top: 40px;
+  color: #00233d;
+  margin-bottom: 6rem;
+}
+
+.hero-text {
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.hero-btn {
+  padding: 0.7rem 2rem;
+  color: #fff;
+  background-color: #00233d;
+  font-weight: 100;
+  border-radius: 3px;
+  border: none;
+}
+
+.footer {
+  background-color: #f7f7f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer-subscription {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
+}
+
+.footer-subscription__title {
+  margin-bottom: 0.5rem;
+  color: #00233d;
+}
+
+.footer-subscription__text {
+  margin-bottom: 0.5rem;
+  color: #323232;
+  font-family: helvetica;
+}
+
+.footer-subscription__input {
+  margin-bottom: 0.5rem;
+  color: #00233d;
+  font-family: helvetica;
+  height: 1.6rem;
+}
+
+.footer-subscription-btn {
+  margin-left: 0.5rem;
+  background: #00233d;
+  color: #fff;
+  padding: 0.3rem 0.7rem;
+  border: none;
+  border-radius: 3px;
+}
+
+.footer-social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-social-media__item {
+  margin-right: 3rem;
+  color: #00233d;
+  font-family: helvetica;
+}
+
+.footer-commitment {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.footer-commitment__title {
+  margin-bottom: 0.5rem;
+  color: #00233d;
+  font-family: helvetica;
+}
+
+.footer-commitment__text {
+  margin-bottom: 0.5rem;
+  color: #323232;
+  font-family: helvetica;
+}
+
+.footer-navigate {
+  margin: 0.5rem 1rem;
+}
+
+.footer-navigate__title {
+  margin-bottom: 0.5rem;
+  color: #00233d;
+  font-family: helvetica;
+}
+
+.footer-navigate__item {
+  color: #323232;
+}
+
+.card {
+  width: 100%;
+  height: 10rem;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-container {
+  width: 18rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+Link {
+  text-decoration: none;
+}
+/*# sourceMappingURL=app.css.map */

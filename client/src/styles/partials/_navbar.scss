@@ -1,0 +1,23 @@
+@import "./variables";
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 1rem;
+  &-options {
+    display: none;
+    justify-content: space-between;
+    color: $blue;
+    &__item {
+      margin-right: 0.2rem;
+      font-weight: 500;
+    }
+  }
+  &-logo {
+    background: url("../assets/logo1.JPG");
+    height: 2rem;
+    width: 7rem;
+    background-position: center;
+    background-size: cover;
+  }
+}

@@ -1,14 +1,13 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
 import Description from "./components/Description";
 import Footer from "./components/Footer";
+import "./styles/app.css";
+import Header from "./components/Header";
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Navbar />
-        <Hero />
+        <Header />
         <Description />
         <Footer />
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 const axios = require("axios");
 
@@ -38,6 +39,7 @@ class Register extends React.Component {
   render() {
     return (
       <section className="register">
+        <Navbar />
         <h1 className="register-title">Register</h1>
         <form className="register-form" onSubmit={this.submitHandler}>
           <div className="register-container">
@@ -124,14 +126,22 @@ class Register extends React.Component {
               onChange={this.changeHandler}
             />
           </div>
-
-          <button className="register-btn" type="submit">
-            Register
-          </button>
+          <div className="register-container">
+            <button className="register-btn" type="submit">
+              Register
+            </button>
+          </div>
+          <div className="register-container register-container__cancel">
+            <div className="register-cancel">
+              <Link className="register-cancel__text" to="/">
+                CANCEL
+              </Link>
+            </div>
+            <Link to="./register">
+              <p className="">Login</p>
+            </Link>
+          </div>
         </form>
-        <Link to="./login">
-          <p className="register-link">Login</p>
-        </Link>
       </section>
     );
   }

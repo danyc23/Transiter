@@ -1,0 +1,47 @@
+@import "./variables";
+.login {
+  &-container {
+    margin: 1rem;
+    &__remember {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+      &-btn {
+        background-color: $blue;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 3px;
+      }
+    }
+  }
+  &-input {
+    width: 100%;
+    height: 2rem;
+  }
+  &-title {
+    color: $blue;
+    margin-left: 1rem;
+  }
+  &-label {
+    display: block;
+    color: $blue;
+    margin-bottom: 0.2rem;
+  }
+  &-btn {
+    width: 100%;
+    background-color: $blue;
+    color: white;
+    height: 2rem;
+    border: none;
+    border-radius: 3px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  &-checkbox {
+    &__text {
+      margin-left: 0.3rem;
+      color: $blue;
+    }
+  }
+}

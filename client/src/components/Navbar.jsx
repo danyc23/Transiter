@@ -3,9 +3,9 @@ import UserIcon from "../assets/user.svg";
 function Navbar() {
   return (
     <nav className="navbar">
-      <section className="navbar-logo">
-        <div></div>
-      </section>
+      <Link to="/">
+        <section className="navbar-logo"></section>
+      </Link>
       <section className="navbar-options">
         <p className="navbar-options__item">About</p>
         <p className="navbar-options__item">Services</p>

@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 import { Redirect, useHistory, Link } from "react-router-dom";
 const axios = require("axios");
 
@@ -38,6 +39,7 @@ class Login extends React.Component {
   render() {
     return (
       <section className="login">
+        <Navbar />
         <h1 className="login-title">Login</h1>
         <form className="login-form" onSubmit={this.submitHandler}>
           <div className="login-container">
@@ -64,14 +66,27 @@ class Login extends React.Component {
               id="password"
             />
           </div>
+          <div className="login-container">
+            <div>
+              <button className="login-btn" type="submit">
+                Log in
+              </button>
+              <input type="checkbox" name="remember" />
+              <label className="login-checkbox__text">Remember me</label>
+            </div>
+            <div className="login-container__remember">
+              <div>
+                <button className="login-container__remember-btn">
+                  Cancel
+                </button>
+              </div>
 
-          <button className="login-btn" type="submit">
-            Log in
-          </button>
+              <Link className="nav-link" to="./register">
+                <p>Register</p>
+              </Link>
+            </div>
+          </div>
         </form>
-        <Link to="./register">
-          <p className="login-link">Register</p>
-        </Link>
       </section>
     );
   }

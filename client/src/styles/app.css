@@ -190,6 +190,100 @@
           justify-content: space-between;
 }
 
+.login-container {
+  margin: 1rem;
+}
+
+.login-container__remember {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.login-container__remember-btn {
+  background-color: #00233d;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 3px;
+}
+
+.login-input {
+  width: 100%;
+  height: 2rem;
+}
+
+.login-title {
+  color: #00233d;
+  margin-left: 1rem;
+}
+
+.login-label {
+  display: block;
+  color: #00233d;
+  margin-bottom: 0.2rem;
+}
+
+.login-btn {
+  width: 100%;
+  background-color: #00233d;
+  color: white;
+  height: 2rem;
+  border: none;
+  border-radius: 3px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.login-checkbox__text {
+  margin-left: 0.3rem;
+  color: #00233d;
+}
+
+.register-title {
+  color: #00233d;
+  margin-left: 1rem;
+}
+
+.register-container {
+  margin: 1rem;
+}
+
+.register-container__cancel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.register-label {
+  display: block;
+  color: #00233d;
+  margin-bottom: 0.2rem;
+}
+
+.register-btn {
+  width: 100%;
+  background-color: #00233d;
+  color: white;
+  height: 2rem;
+  border: none;
+  border-radius: 3px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.register-input {
+  width: 100%;
+  height: 2rem;
+}
+
 * {
   margin: 0;
   padding: 0;

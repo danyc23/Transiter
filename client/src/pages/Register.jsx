@@ -25,7 +25,7 @@ class Register extends React.Component {
     this.setState({
       [e.target.name]: e.target.value,
     });
-    axios.post("http://localhost:5000/users/users", {
+    axios.post("http://localhost:5000/users", {
       companyName: this.state.companyName,
       country: this.state.country,
       regNumber: this.state.regNumber,

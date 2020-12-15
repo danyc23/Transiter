@@ -1,14 +1,29 @@
 import React from "react";
-const axios = require("axios");
+import axios from "axios";
 class Profile extends React.Component {
   componentDidMount() {
-    this.getUser();
+    if (
+      sessionStorage.getItem("authToken") &&
+      sessionStorage.getItem("userId")
+    ) {
+      console.log("authToken and userid exists");
+      this.getUser(sessionStorage.getItem("userId"));
+    }
   }
 
-  getUser = () => {
-    axios.get(`http://localhost/5000/users`).then((response) => {
-      console.log(response);
-    });
+  getUser = (id) => {
+    axios
+      .get(`http://localhost:5000/users/${id}`, {
+        header: {
+          authorization: `BEARER ${sessionStorage.getItem("authToken")}`,
+        },
+      })
+      .then((response) => {
+        console.log(response.data.bookings);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   render() {
     return <section></section>;

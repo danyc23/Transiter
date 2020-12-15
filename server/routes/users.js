@@ -5,12 +5,13 @@ const middleware = require("../middleware/auth");
 
 //get all users
 router.route("/").get(controller.getUsers);
-//get user with booking
-router.route("/:id").get(controller.getUserWithBookings);
 
 //create a new user
 router.route("/").post(controller.createNewUser);
 //login a new user
 router.route("/login").post(controller.loginUser);
+
+//get user with booking
+router.route("/:id").get(controller.getUserWithBookings);
 
 module.exports = router;

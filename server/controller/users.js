@@ -29,6 +29,7 @@ const getUsers = async (req, res) => {
 //     });
 // };
 const getUserWithBookings = async (req, res) => {
+  console.log(req);
   const data = await prisma.users.findUnique({
     where: { id: parseInt(req.params.id) },
     include: { bookings: true },
@@ -42,9 +43,6 @@ const getUserWithBookings = async (req, res) => {
 //create a new user
 
 const createNewUser = async (req, res) => {
-  const salt = await bcrypt.genSalt();
-  const hashedPassword = await bcrypt.hash(req.body.password, salt);
-
   const {
     companyName,
     country,
@@ -79,6 +77,8 @@ const createNewUser = async (req, res) => {
     //   .then((newUser) => {
     //     res.status(201).json({ newUser });
     //   });
+    const hashedPassword = await bcrypt.hash(req.body.password, 10);
+
     await prisma.users
       .create({
         data: {
@@ -88,7 +88,7 @@ const createNewUser = async (req, res) => {
           address: address,
           phone: phone,
           email: email,
-          password: password,
+          password: hashedPassword,
         },
       })
       .then((newUser) => {
@@ -107,21 +107,35 @@ const loginUser = async (req, res) => {
     await prisma.users
       .findUnique({
         where: { email: req.body.email },
-        select: { password: true },
+        select: { password: true, id: true },
       })
       .then((user) => {
-        console.log(user);
-        if (user.password === req.body.password) {
-          // console.log("this is the password", user.password);
-          let token = jwt.sign(
-            { [req.body.email]: req.body.email },
-            process.env.ACCESS_TOKEN_SECRET
-          );
-          res.status(200).json({ token });
-          // res.status(200).json({ user }).json({ token });
-        } else {
-          res.json({ error: "Incorrect password or email" });
-        }
+        console.log("User data ------>", user);
+        // if (user.password === req.body.password) {
+        //   // console.log("this is the password", user.password);
+        //   let token = jwt.sign(
+        //     { [req.body.email]: req.body.email },
+        //     process.env.ACCESS_TOKEN_SECRET
+        //   );
+        //   res.status(200).json({ token });
+        //   // res.status(200).json({ user }).json({ token });
+        // } else {
+        //   res.json({ error: "Incorrect password or email" });
+        // }
+        bcrypt.compare(req.body.password, user.password, (err, result) => {
+          if (err) {
+            throw err;
+          }
+          if (result) {
+            let token = jwt.sign(
+              { [req.body.email]: req.body.email },
+              process.env.ACCESS_TOKEN_SECRET
+            );
+            res.status(200).json({ token, id: user.id });
+          } else {
+            res.json({ error: "Incorrect password or email" });
+          }
+        });
       })
       .catch((err) => {
         res.send(err);

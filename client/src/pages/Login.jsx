@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import { Redirect, useHistory, Link } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 const axios = require("axios");
 
 class Login extends React.Component {
@@ -32,12 +32,15 @@ class Login extends React.Component {
         .then((res) => {
           console.log(res);
           sessionStorage.authToken = res.data.token;
+          sessionStorage.userId = res.data.id;
         });
     }
   };
 
   render() {
-    return (
+    return sessionStorage.getItem("authToken") ? (
+      <Redirect to="/profile" />
+    ) : (
       <section className="login">
         <Navbar />
         <h1 className="login-title">Login</h1>

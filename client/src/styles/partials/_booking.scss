@@ -1,0 +1,23 @@
+@import "./variables";
+.booking {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid grey;
+  &-left {
+    margin-left: 0.5rem;
+  }
+  &-details {
+    &__btn {
+      background-color: $blue;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+    }
+    &__container {
+      margin-right: 0.5rem;
+    }
+  }
+}

@@ -6,6 +6,8 @@
 @import "./partials/description";
 @import "./partials/login";
 @import "./partials/register";
+@import "./partials/profile";
+@import "./partials/booking";
 * {
   margin: 0;
   padding: 0;
@@ -13,4 +15,7 @@
 }
 Link {
   text-decoration: none;
+}
+ul {
+  list-style-type: none;
 }

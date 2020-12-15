@@ -43,6 +43,7 @@ const getUserWithBookings = async (req, res) => {
 //create a new user
 
 const createNewUser = async (req, res) => {
+  console.log(req.body);
   const {
     companyName,
     country,
@@ -78,7 +79,7 @@ const createNewUser = async (req, res) => {
     //     res.status(201).json({ newUser });
     //   });
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
-
+    console.log("creating user");
     await prisma.users
       .create({
         data: {
@@ -110,7 +111,6 @@ const loginUser = async (req, res) => {
         select: { password: true, id: true },
       })
       .then((user) => {
-        console.log("User data ------>", user);
         // if (user.password === req.body.password) {
         //   // console.log("this is the password", user.password);
         //   let token = jwt.sign(

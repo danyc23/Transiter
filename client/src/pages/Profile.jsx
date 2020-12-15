@@ -1,6 +1,14 @@
 import React from "react";
 import axios from "axios";
+import Navbar from "../components/Navbar";
+import BookingList from "../components/BookingList";
+import ProfileDetails from "../components/ProfileDetails";
 class Profile extends React.Component {
+  state = {
+    userData: {},
+    bookingList: [],
+  };
+
   componentDidMount() {
     if (
       sessionStorage.getItem("authToken") &&
@@ -19,14 +27,24 @@ class Profile extends React.Component {
         },
       })
       .then((response) => {
-        console.log(response.data.bookings);
+        this.setState({
+          userData: response.data,
+          bookingList: response.data.bookings,
+        });
+        console.log(this.state.userData, this.state.bookingList);
       })
       .catch((err) => {
         console.log(err);
       });
   };
   render() {
-    return <section></section>;
+    return (
+      <section>
+        <Navbar />
+        <ProfileDetails data={this.state.userData} />
+        <BookingList list={this.state.bookingList} />
+      </section>
+    );
   }
 }
 

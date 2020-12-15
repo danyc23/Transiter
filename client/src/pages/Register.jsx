@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 const axios = require("axios");
 
 class Register extends React.Component {
@@ -34,8 +34,17 @@ class Register extends React.Component {
       email: this.state.email,
       password: this.state.password,
     });
+    this.setState({
+      companyName: "",
+      country: "",
+      regNumber: "",
+      address: "",
+      phone: "",
+      email: "",
+      password: "",
+    });
+    <Redirect to="/login"></Redirect>;
   };
-
   render() {
     return (
       <section className="register">

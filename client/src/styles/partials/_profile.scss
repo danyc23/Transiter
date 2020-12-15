@@ -1,0 +1,35 @@
+@import "./variables";
+
+.profile {
+  &-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  &-image__section {
+    background: url("../assets/ship.jpg");
+    width: 8rem;
+    height: 12rem;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+  }
+  &-title {
+    color: $blue;
+  }
+}
+.new-transit {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  &__btn {
+    background-color: $blue;
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 8px 0;
+    border-radius: 3px;
+  }
+}

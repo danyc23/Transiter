@@ -1,6 +1,3 @@
-import Facebook from "../assets/SVG/Icon-facebook.svg";
-import Twitter from "../assets/SVG/Icon-twitter.svg";
-import Instagram from "../assets/SVG/Icon-instagram.svg";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -20,24 +17,6 @@ function Footer() {
           />
           <button className="footer-subscription-btn">SIGN UP</button>
         </div>
-
-        {/* <div className="footer-social-media">
-          <img
-            className="footer-social-media__item"
-            src={Facebook}
-            alt="facebook"
-          />
-          <img
-            className="footer-social-media__item"
-            src={Twitter}
-            alt="twitter"
-          />
-          <img
-            className="footer-social-media__item"
-            src={Instagram}
-            alt="linkedin"
-          />
-        </div> */}
       </section>
       <section className="footer-commitment ">
         <h3 className="footer-commitment__title">OUR COMMITMENTS</h3>

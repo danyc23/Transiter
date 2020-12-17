@@ -3,13 +3,13 @@ function Description() {
   return (
     <section className="description">
       <div className="card-container">
-        <Card text="Book Now!" />
+        <Card className="card-1 card" text="Book Now!" />
       </div>
       <div className="card-container">
-        <Card text="It's Fast" />
+        <Card className="card-2 card" text="It's Fast" />
       </div>
       <div className="card-container">
-        <Card text="The best Fare" />
+        <Card className="card-3 card" text="The best Fare" />
       </div>
     </section>
   );

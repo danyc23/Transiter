@@ -1,5 +1,7 @@
 const Bookings = require("../models/bookings");
 const Users = require("../models/users");
+const { PrismaClient } = require("@prisma/client");
+const prisma = new PrismaClient();
 
 //get all bookings
 const getBookings = (req, res) => {
@@ -25,12 +27,29 @@ const newBooking = (req, res) => {
     description: req.body.description,
   })
     .save()
-    .then((updatedBooking) => {
-      res.status(200).json({ updatedBooking });
+    .then((newBooking) => {
+      res.status(200).json({ newBooking });
+    });
+};
+
+//still need to be edited
+
+const editBooking = async (req, res) => {
+  await prisma.bookings
+    .update({
+      where: { id: Number(req.body.id) },
+      data: { date: req.body.date, description: req.body.description },
+    })
+    .then((booking) => {
+      res.status(201).json({ booking });
+    })
+    .catch((err) => {
+      res.json({ err });
     });
 };
 module.exports = {
   getBookings,
   getUserBookings,
   newBooking,
+  editBooking,
 };

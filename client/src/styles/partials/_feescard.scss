@@ -1,0 +1,21 @@
+@import "./variables";
+.fees {
+  &-section {
+    margin: 1rem;
+    &__title {
+      color: $blue;
+    }
+  }
+  &-container {
+    display: flex;
+    justify-content: center;
+  }
+  &-subcontainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  &-title {
+    color: $blue;
+  }
+}

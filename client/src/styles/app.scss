@@ -1,3 +1,5 @@
+@import "./partials/mixins";
+@import "./partials/typography";
 @import "./partials/navbar";
 @import "./partials/hero";
 @import "./partials/variables";
@@ -8,6 +10,10 @@
 @import "./partials/register";
 @import "./partials/profile";
 @import "./partials/booking";
+@import "./partials//modal";
+@import "./partials//newbooking";
+@import "./partials/Feescard";
+
 * {
   margin: 0;
   padding: 0;

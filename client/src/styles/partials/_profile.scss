@@ -19,6 +19,15 @@
   &-title {
     color: $blue;
   }
+  &-main {
+    &__section {
+      display: flex;
+      justify-content: center;
+    }
+    &__title {
+      color: $blue;
+    }
+  }
 }
 .new-transit {
   display: flex;
@@ -27,9 +36,10 @@
   &__btn {
     background-color: $blue;
     color: white;
-    width: 100%;
     border: none;
     padding: 8px 0;
     border-radius: 3px;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }

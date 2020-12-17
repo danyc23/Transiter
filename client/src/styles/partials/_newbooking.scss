@@ -1,0 +1,40 @@
+@import "./variables";
+.new-booking {
+  &__container {
+  }
+  &__title {
+    color: $blue;
+    &-container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__label {
+    display: block;
+    margin: 1rem;
+    color: $blue;
+  }
+  &__input {
+    display: block;
+
+    margin: 1rem;
+    &--desc {
+      height: 100px;
+      width: 90%;
+    }
+  }
+  &__btn {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    background-color: $blue;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    &-container {
+      margin: 1rem;
+    }
+  }
+}

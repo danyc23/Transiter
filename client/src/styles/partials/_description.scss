@@ -2,4 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  @include desktop {
+    height: 500px;
+  }
 }

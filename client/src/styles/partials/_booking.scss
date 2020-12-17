@@ -20,4 +20,11 @@
       margin-right: 0.5rem;
     }
   }
+  &-list__main-title {
+    color: $blue;
+    &-section {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }

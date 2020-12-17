@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 function Booking(props) {
   const date = props.date;
   const desc = props.desc;
+  const id = props.id;
   return (
     <li className="booking">
       <div className="booking-left">
@@ -16,7 +17,7 @@ function Booking(props) {
       </div>
 
       <div className="booking-details__container">
-        <Link to="/details">
+        <Link to={`/edit/${id}`}>
           <button className="booking-details__btn">Details</button>
         </Link>
       </div>

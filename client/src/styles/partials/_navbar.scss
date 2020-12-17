@@ -4,13 +4,29 @@
   justify-content: space-between;
   align-items: center;
   margin: 0.5rem 1rem;
+  @include desktop {
+    margin-left: 180px;
+    margin-right: 180px;
+    height: 40px;
+  }
   &-options {
     display: none;
     justify-content: space-between;
     color: $blue;
+    @include tablet {
+      display: flex;
+      @include tablet-sub-header;
+    }
+    @include desktop {
+      display: flex;
+      margin-left: 20px;
+    }
     &__item {
       margin-right: 0.2rem;
       font-weight: 500;
+      @include desktop {
+        margin-left: 2rem;
+      }
     }
   }
   &-logo {
@@ -19,5 +35,27 @@
     width: 7rem;
     background-position: center;
     background-size: cover;
+    @include desktop {
+      height: 3rem;
+      width: 8.5rem;
+    }
+    &-options__container {
+      @include desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
   }
+  &-btn {
+    &__login {
+      @include desktop {
+        @include tablet-sub-header;
+      }
+    }
+  }
+}
+
+.logout-noshow {
+  display: none;
 }

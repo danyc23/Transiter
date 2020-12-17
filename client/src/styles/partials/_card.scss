@@ -1,33 +1,41 @@
 .card {
   width: 100%;
-  height: 15rem;
+  height: 18rem;
   border-radius: 3px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  &-img {
+    width: 10rem;
+    @include desktop {
+      width: 12rem;
+    }
+  }
 
-  &-1 {
-    @include desktop {
-      background-image: url("../assets/2.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-  }
-  &-2 {
-    @include desktop {
-      background-image: url("../assets/4.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-  }
-  &-3 {
-    @include desktop {
-      background-image: url("../assets/6.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-  }
+  // &-1 {
+  //   @include desktop {
+  //     background-image: url("../assets/barco.jpg");
+  //     background-size: cover;
+  //     background-position: center;
+  //     // margin-left: 170px;
+  //   }
+  // }
+  // &-2 {
+  //   @include desktop {
+  //     background-image: url("../assets/reloj.jpeg");
+  //     background-size: cover;
+  //     background-position: center;
+  //   }
+  // }
+  // &-3 {
+  //   @include desktop {
+  //     background-image: url("../assets/plata.jpg");
+  //     background-size: cover;
+  //     background-position: center;
+  //     margin-right: 170px;
+  //   }
+  // }
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
@@ -36,6 +44,16 @@
     margin-left: 1rem;
     margin-right: 1rem;
     @include desktop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__title {
+      @include desktop {
+        @include tablet-second-header;
+        color: $blue;
+        margin-bottom: 2rem;
+      }
     }
   }
 }

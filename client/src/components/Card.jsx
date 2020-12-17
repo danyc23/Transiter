@@ -1,9 +1,4 @@
 function Card(props) {
-  return (
-    <div className={props.className}>
-      <div></div>
-      <div className="card-text">{props.text}</div>
-    </div>
-  );
+  return <div className={props.className}></div>;
 }
 export default Card;

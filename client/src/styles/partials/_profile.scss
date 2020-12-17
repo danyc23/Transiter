@@ -7,18 +7,40 @@
     justify-content: space-between;
     margin-left: 1rem;
     margin-right: 1rem;
+    @include desktop {
+      margin-left: 180px;
+      margin-right: 180px;
+    }
   }
-  &-image__section {
-    background: url("../assets/ship.jpg");
-    width: 8rem;
-    height: 12rem;
-    background-position: center;
-    background-size: cover;
-    border-radius: 5px;
+  &-text {
+    @include desktop {
+      @include tablet-sub-header;
+    }
+  }
+  &-image {
+    @include desktop {
+      width: 15rem;
+      height: 13rem;
+    }
+    &__section {
+      background: url("../assets/user.png");
+      width: 8rem;
+      height: 12rem;
+      background-position: center;
+      background-size: cover;
+      border-radius: 5px;
+    }
   }
   &-title {
     color: $blue;
+    @include desktop {
+      font-size: 20px;
+      line-height: 32px;
+      font-family: "avenir";
+      font-weight: bold;
+    }
   }
+
   &-main {
     &__section {
       display: flex;
@@ -26,6 +48,11 @@
     }
     &__title {
       color: $blue;
+      @include desktop {
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+        @include tablet-second-header;
+      }
     }
   }
 }
@@ -41,5 +68,9 @@
     border-radius: 3px;
     padding-left: 3rem;
     padding-right: 3rem;
+    @include desktop {
+      @include tablet-sub-header;
+      padding: 0.7rem 4rem;
+    }
   }
 }

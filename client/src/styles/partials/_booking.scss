@@ -5,8 +5,37 @@
   align-items: center;
   justify-content: space-between;
   border: 1px solid grey;
+  @include desktop {
+    margin-left: 180px;
+    margin-right: 180px;
+    box-shadow: 3px 3px 3px 0 #aaaaaa;
+  }
   &-left {
     margin-left: 0.5rem;
+    @include desktop {
+      margin: 1rem;
+    }
+  }
+  &-date {
+    &__container {
+      @include desktop {
+        margin-bottom: 0.5rem;
+      }
+    }
+    &__title {
+      @include desktop {
+        font-size: 20px;
+        line-height: 32px;
+        font-family: "avenir";
+        font-weight: bold;
+        color: $blue;
+      }
+    }
+    &__text {
+      @include desktop {
+        @include tablet-sub-header;
+      }
+    }
   }
   &-details {
     &__btn {
@@ -15,16 +44,49 @@
       padding: 0.5rem 1rem;
       border: none;
       border-radius: 5px;
+      @include desktop {
+        padding: 0.7rem 3rem;
+        @include tablet-sub-header;
+      }
     }
     &__container {
       margin-right: 0.5rem;
+      &--btn {
+        @include desktop {
+          margin-right: 1rem;
+        }
+      }
     }
   }
   &-list__main-title {
     color: $blue;
+    @include desktop {
+      font-size: 20px;
+      line-height: 32px;
+      font-family: "avenir";
+      font-weight: bold;
+    }
     &-section {
       display: flex;
       justify-content: center;
+    }
+  }
+  &-description {
+    &__container {
+    }
+    &__title {
+      @include desktop {
+        font-size: 20px;
+        line-height: 32px;
+        font-family: "avenir";
+        font-weight: bold;
+        color: $blue;
+      }
+    }
+    &__text {
+      @include desktop {
+        @include tablet-sub-header;
+      }
     }
   }
 }

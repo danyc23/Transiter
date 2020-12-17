@@ -43,53 +43,59 @@ class Login extends React.Component {
     ) : (
       <section className="login">
         <Navbar />
-        <h1 className="login-title">Login</h1>
-        <form className="login-form" onSubmit={this.submitHandler}>
-          <div className="login-container">
-            <label className="login-label" for="email">
-              Email
-            </label>
-            <input
-              onChange={this.changeHandler}
-              className="login-input"
-              type="text"
-              name="email"
-              id="email"
-            />
-          </div>
-          <div className="login-container">
-            <label className="login-label" for="password">
-              Password
-            </label>
-            <input
-              onChange={this.changeHandler}
-              className="login-input"
-              type="password"
-              name="password"
-              id="password"
-            />
-          </div>
-          <div className="login-container">
-            <div>
-              <button className="login-btn" type="submit">
-                Log in
-              </button>
-              <input type="checkbox" name="remember" />
-              <label className="login-checkbox__text">Remember me</label>
+        <div className="login-main__container">
+          <div className="login-border">
+            <div className="login-title__container">
+              <h1 className="login-title">Login</h1>
             </div>
-            <div className="login-container__remember">
-              <div>
-                <button className="login-container__remember-btn">
-                  Cancel
-                </button>
+            <form className="login-form" onSubmit={this.submitHandler}>
+              <div className="login-container">
+                <label className="login-label" for="email">
+                  Email
+                </label>
+                <input
+                  onChange={this.changeHandler}
+                  className="login-input"
+                  type="text"
+                  name="email"
+                  id="email"
+                />
               </div>
+              <div className="login-container">
+                <label className="login-label" for="password">
+                  Password
+                </label>
+                <input
+                  onChange={this.changeHandler}
+                  className="login-input"
+                  type="password"
+                  name="password"
+                  id="password"
+                />
+              </div>
+              <div className="login-container login-container--last">
+                <div>
+                  <button className="login-btn" type="submit">
+                    Log in
+                  </button>
+                  <input type="checkbox" name="remember" />
+                  <label className="login-checkbox__text">Remember me</label>
+                </div>
+                <div className="login-container__remember">
+                  <div>
+                    <button className="login-container__remember-btn">
+                      Cancel
+                    </button>
+                  </div>
 
-              <Link className="nav-link" to="./register">
-                <p>Register</p>
-              </Link>
-            </div>
+                  <Link className="nav-link" to="./register">
+                    <p className="login-register__text">Register</p>
+                  </Link>
+                </div>
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
       </section>
     );
   }

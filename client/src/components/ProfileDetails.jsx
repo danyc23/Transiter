@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ModalBooking from "./ModalBooking";
 import { Link } from "react-router-dom";
+import ProfileImg from "../assets/user.png";
 
 function ProfileDetails(props) {
   const { companyName } = props.data;
@@ -14,16 +15,16 @@ function ProfileDetails(props) {
   return (
     <section>
       <div className="profile-details">
-        <div>
+        <div className="profile-details__content">
           <div className="company-name__section ">
             <h3 className="company-name__title profile-title">Company Name</h3>
-            <p companyName={companyName} className="company-name__text">
+            <p companyName={companyName} className="profile-text">
               {companyName}
             </p>
           </div>
           <div className="country__section">
             <h3 className="country__title profile-title">Country</h3>
-            <p country={country} className="country__text">
+            <p country={country} className="profile-text">
               {country}
             </p>
           </div>
@@ -31,24 +32,26 @@ function ProfileDetails(props) {
             <h3 className="regNumber__title profile-title">
               Registration Number
             </h3>
-            <p regNumber={regNumber} className="regNumber__text">
+            <p regNumber={regNumber} className="profile-text">
               {regNumber}
             </p>
           </div>
           <div className="address__section">
             <h3 className="address__title profile-title">Address</h3>
-            <p address={address} className="address__text">
+            <p address={address} className="profile-text">
               {address}
             </p>
           </div>
           <div className="phone__section">
             <h3 className="phone__title profile-title">Phone Number</h3>
-            <p phone={phone} className="phone__text profile-title">
+            <p phone={phone} className="profile-text">
               {phone}
             </p>
           </div>
         </div>
-        <div className="profile-image__section"></div>
+        <div>
+          <img className="profile-image" src={ProfileImg} alt="" />
+        </div>
       </div>
       <div className="new-transit">
         <Link to="/newbooking">

@@ -42,7 +42,7 @@ class Profile extends React.Component {
       <section>
         <Navbar />
         <div className="profile-main__section">
-          <h1 className="profile-main__title">Profile</h1>
+          <h1 className="profile-main__title">Profile Information</h1>
         </div>
         <ProfileDetails data={this.state.userData} />
         <BookingList list={this.state.bookingList} />

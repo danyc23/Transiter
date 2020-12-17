@@ -6,6 +6,9 @@
   flex-wrap: wrap;
   @include desktop {
     height: 150px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
   }
   &-subscription {
     margin-left: 1rem;
@@ -13,18 +16,27 @@
     margin-bottom: 1rem;
     padding-top: 1.5rem;
     @include desktop {
-      width: 33%;
       display: flex;
       flex-direction: column;
+      margin-left: 20px;
+      width: 33%;
     }
     &__title {
       margin-bottom: 0.5rem;
       color: $blue;
+      @include desktop {
+        @include tablet-second-header;
+      }
     }
     &__text {
       margin-bottom: 0.5rem;
       color: $black;
       font-family: helvetica;
+      @include desktop {
+        @include tablet-paragraph;
+        line-height: 20px;
+        width: 70%;
+      }
     }
     &__input {
       margin-bottom: 0.5rem;
@@ -58,26 +70,39 @@
     &__title {
       margin-bottom: 0.5rem;
       color: $blue;
-      font-family: helvetica;
+      @include desktop {
+        @include tablet-second-header;
+      }
     }
     &__text {
       margin-bottom: 0.5rem;
       color: $black;
       font-family: helvetica;
+      @include desktop {
+        width: 75%;
+        @include tablet-paragraph;
+        line-height: 20px;
+      }
     }
   }
   &-navigate {
     margin: 0.5rem 1rem;
     @include desktop {
-      width: 25%;
     }
     &__title {
       margin-bottom: 0.5rem;
       color: $blue;
       font-family: helvetica;
+      @include desktop {
+        @include tablet-second-header;
+      }
     }
     &__item {
       color: $black;
+      @include desktop {
+        @include tablet-paragraph;
+        line-height: 20px;
+      }
     }
   }
 }

@@ -7,7 +7,7 @@ function Hero() {
           The Future In The Maritime Industry Is Here
         </h1>
         <p className="hero-text">
-          Leaders In Booking Transits Through The Panama Canal.
+          Leaders In Transit Bookings Through The Panama Canal.
         </p>
         <Link to="/login">
           <button className="hero-btn">Book Your Transit</button>

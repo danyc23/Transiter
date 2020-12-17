@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="footer">
       <section className="footer-subscription">
-        <h3 className="footer-subscription__title">STAY CONNECTED</h3>
+        <h3 className="footer-subscription__title">Stay Connected</h3>
         <p className="footer-subscription__text">
           Subscribe to receive the last updates from the Panama Canal
         </p>
@@ -15,14 +15,14 @@ function Footer() {
             name="email"
             id="footer-email"
           />
-          <button className="footer-subscription-btn">SIGN UP</button>
+          <button className="footer-subscription-btn">Sign Up</button>
         </div>
       </section>
       <section className="footer-commitment ">
-        <h3 className="footer-commitment__title">OUR COMMITMENTS</h3>
+        <h3 className="footer-commitment__title">Our Vision</h3>
         <p className="footer-commitment__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-          doloremque nobis aut ab sit sequi asperiores deserunt temporibus, rem
+          Provide the best service to our clients by providing the best rates in
+          a timely manner to ensure a smooth transit through the Panama Canal.
         </p>
       </section>
       <section className="footer-navigate">

@@ -4,6 +4,9 @@
     margin: 1rem;
     &__title {
       color: $blue;
+      @include desktop {
+        @include tablet-second-header;
+      }
     }
   }
   &-container {
@@ -14,8 +17,26 @@
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
+    @include desktop {
+      margin-top: 2rem;
+    }
   }
   &-title {
     color: $blue;
+    @include desktop {
+      font-size: 20px;
+      line-height: 32px;
+      font-family: "avenir";
+      font-weight: bold;
+    }
+  }
+  &-amount {
+    @include desktop {
+      font-size: 18px;
+      line-height: 32px;
+      font-family: "avenir";
+      font-weight: bold;
+      color: $blue;
+    }
   }
 }

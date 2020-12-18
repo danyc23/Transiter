@@ -31,9 +31,12 @@
 
 @media (min-width: 1440px) {
   .navbar {
-    margin-left: 180px;
-    margin-right: 180px;
-    height: 40px;
+    padding-left: 180px;
+    padding-right: 180px;
+    height: 50px;
+    -webkit-box-shadow: 3px 3px 3px 0 #aaaaaa;
+            box-shadow: 3px 3px 3px 0 #aaaaaa;
+    margin: 0;
   }
 }
 
@@ -110,6 +113,7 @@
     font-size: 16px;
     line-height: 24px;
     font-family: "avenir demi";
+    color: #00233d;
   }
 }
 
@@ -727,6 +731,8 @@
     line-height: 32px;
     font-family: "avenir";
     font-weight: bold;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -907,6 +913,13 @@
   }
 }
 
+@media (min-width: 1440px) {
+  .new-booking__container {
+    margin-left: 350px;
+    margin-right: 350px;
+  }
+}
+
 .new-booking__title {
   color: #00233d;
 }
@@ -920,10 +933,30 @@
           justify-content: center;
 }
 
+@media (min-width: 1440px) {
+  .new-booking__title-container {
+    margin-top: 4rem;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "avenir";
+    font-weight: bold;
+  }
+}
+
 .new-booking__label {
   display: block;
   margin: 1rem;
   color: #00233d;
+}
+
+@media (min-width: 1440px) {
+  .new-booking__label {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "avenir";
+    font-weight: bold;
+    color: #00233d;
+  }
 }
 
 .new-booking__input {
@@ -934,6 +967,12 @@
 .new-booking__input--desc {
   height: 100px;
   width: 90%;
+}
+
+@media (min-width: 1440px) {
+  .new-booking__input--desc {
+    width: 96%;
+  }
 }
 
 .new-booking__btn {
@@ -948,8 +987,25 @@
   color: white;
 }
 
+@media (min-width: 1440px) {
+  .new-booking__btn {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "avenir demi";
+  }
+}
+
 .new-booking__btn-container {
   margin: 1rem;
+}
+
+@media (min-width: 1440px) {
+  .new-booking__btn-container {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
 }
 
 .fees-section {
@@ -958,6 +1014,15 @@
 
 .fees-section__title {
   color: #00233d;
+}
+
+@media (min-width: 1440px) {
+  .fees-section__title {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "avenir";
+    font-weight: bold;
+  }
 }
 
 .fees-container {
@@ -979,8 +1044,33 @@
   margin-top: 1rem;
 }
 
+@media (min-width: 1440px) {
+  .fees-subcontainer {
+    margin-top: 2rem;
+  }
+}
+
 .fees-title {
   color: #00233d;
+}
+
+@media (min-width: 1440px) {
+  .fees-title {
+    font-size: 20px;
+    line-height: 32px;
+    font-family: "avenir";
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 1440px) {
+  .fees-amount {
+    font-size: 18px;
+    line-height: 32px;
+    font-family: "avenir";
+    font-weight: bold;
+    color: #00233d;
+  }
 }
 
 * {
@@ -990,7 +1080,7 @@
           box-sizing: border-box;
 }
 
-Link {
+a {
   text-decoration: none;
 }
 

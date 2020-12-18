@@ -3,7 +3,7 @@ exports.up = (knex) => {
     table.increments("id").primary();
     table.integer("user_id").unsigned().references("users.id");
     table.string("date").notNullable();
-    table.string("description").notNullable();
+    table.string("description", 500).notNullable();
     table.timestamp("updated_at").defaultTo(knex.fn.now());
   });
 };

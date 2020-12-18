@@ -9,7 +9,7 @@ function BookingList(props) {
       </div>
 
       <ul>
-        {bookingsList.map((bookingItem) => {
+        {bookingsList.sort().map((bookingItem) => {
           return (
             <Booking
               key={bookingItem.id}

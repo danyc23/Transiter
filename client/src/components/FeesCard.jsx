@@ -6,15 +6,15 @@ function FeesCard() {
       </div>
       <div className="fees-subcontainer">
         <h4 className="fees-title">Transit Fee </h4>
-        <p>$10,000</p>
+        <p className="fees-amount">$10,000</p>
       </div>
       <div className="fees-subcontainer">
         <h4 className="fees-title">Agency Fee </h4>
-        <p>$2,000</p>
+        <p className="fees-amount">$2,000</p>
       </div>
       <div className="fees-subcontainer">
         <h4 className="fees-title">Total Amount </h4>
-        <p>$12,000</p>
+        <p className="fees-amount">$12,000</p>
       </div>
     </section>
   );

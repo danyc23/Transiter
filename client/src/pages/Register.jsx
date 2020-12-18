@@ -25,25 +25,37 @@ class Register extends React.Component {
     this.setState({
       [e.target.name]: e.target.value,
     });
-    axios.post("http://localhost:5000/users", {
-      companyName: this.state.companyName,
-      country: this.state.country,
-      regNumber: this.state.regNumber,
-      address: this.state.address,
-      phone: this.state.phone,
-      email: this.state.email,
-      password: this.state.password,
-    });
-    this.setState({
-      companyName: "",
-      country: "",
-      regNumber: "",
-      address: "",
-      phone: "",
-      email: "",
-      password: "",
-    });
-    <Redirect to="/login"></Redirect>;
+    this.registerUser();
+    e.target.reset();
+  };
+
+  registerUser = () => {
+    axios
+      .post("http://localhost:5000/users", {
+        companyName: this.state.companyName,
+        country: this.state.country,
+        regNumber: this.state.regNumber,
+        address: this.state.address,
+        phone: this.state.phone,
+        email: this.state.email,
+        password: this.state.password,
+      })
+      .then((newUser) => {
+        console.log(newUser);
+        this.setState({
+          companyName: "",
+          country: "",
+          regNumber: "",
+          address: "",
+          phone: "",
+          email: "",
+          password: "",
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        <Redirect to="/login"></Redirect>;
+      });
   };
   render() {
     return (

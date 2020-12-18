@@ -25,6 +25,7 @@ class NewBooking extends React.Component {
         [e.target.name]: e.target.value,
       });
       this.createBooking(sessionStorage.getItem("userId"));
+      e.target.reset();
     }
   };
 
@@ -47,7 +48,7 @@ class NewBooking extends React.Component {
     return (
       <section className="new-booking">
         <Navbar />
-        <div className="new-booking__container">
+        <form onSubmit={this.handleSubmit} className="new-booking__container">
           <div className="new-booking__title-container">
             <h2 className="new-booking__title">Book Transit</h2>
           </div>
@@ -70,14 +71,14 @@ class NewBooking extends React.Component {
           </div>
           <FeesCard />
           <div className="new-booking__btn-container">
-            <button onClick={this.handleSubmit} className="new-booking__btn">
+            <button type="submit" className="new-booking__btn">
               BOOK
             </button>
             <Link to="/profile">
               <button className="new-booking__btn">CANCEL</button>
             </Link>
           </div>
-        </div>
+        </form>
       </section>
     );
   }

@@ -33,6 +33,7 @@ class Login extends React.Component {
           console.log(res);
           sessionStorage.authToken = res.data.token;
           sessionStorage.userId = res.data.id;
+          this.setState({ loggedIn: true });
         });
     }
   };

@@ -104,6 +104,7 @@
     }
   }
   &-register__text {
+    color: $blue;
     @include desktop {
       @include tablet-sub-header;
     }

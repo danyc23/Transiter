@@ -54,7 +54,6 @@ class Register extends React.Component {
       })
       .catch((err) => {
         console.log(err);
-        <Redirect to="/login"></Redirect>;
       });
   };
   render() {

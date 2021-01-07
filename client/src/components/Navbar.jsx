@@ -13,9 +13,15 @@ function Navbar() {
           <section className="navbar-logo"></section>
         </Link>
         <section className="navbar-options">
-          <p className="navbar-options__item">ABOUT</p>
-          <p className="navbar-options__item">SERVICES</p>
-          <p className="navbar-options__item">CONTACT</p>
+          <Link to="/about">
+            <p className="navbar-options__item">ABOUT</p>
+          </Link>
+          <Link to="/services">
+            <p className="navbar-options__item">SERVICES</p>
+          </Link>
+          <Link to="/contact">
+            <p className="navbar-options__item">CONTACT</p>
+          </Link>
         </section>
       </div>
 

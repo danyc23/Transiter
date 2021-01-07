@@ -84,9 +84,11 @@ class Login extends React.Component {
                 </div>
                 <div className="login-container__remember">
                   <div>
-                    <button className="login-container__remember-btn">
-                      Cancel
-                    </button>
+                    <Link to="/">
+                      <button className="login-container__remember-btn">
+                        Cancel
+                      </button>
+                    </Link>
                   </div>
 
                   <Link className="nav-link" to="./register">

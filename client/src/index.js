@@ -7,6 +7,9 @@ import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import NewBooking from "./pages/NewBooking";
 import Edit from "./pages/Edit";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
 
 ReactDOM.render(
   <Router>
@@ -17,6 +20,9 @@ ReactDOM.render(
       <Route path="/profile" component={Profile}></Route>
       <Route path="/newbooking" component={NewBooking} />
       <Route path="/edit/:id" component={Edit} />
+      <Route path="/about" component={About} />
+      <Route path="/services" component={Services} />
+      <Route path="/contact" component={Contact} />
     </Switch>
   </Router>,
 

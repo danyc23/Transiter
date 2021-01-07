@@ -80,7 +80,7 @@ export default class Edit extends Component {
               EDIT
             </button>
             <Link to="/profile">
-              <button className="new-booking__btn">CANCEL</button>
+              <button className="new-booking__btn">BACK</button>
             </Link>
           </div>
         </form>

@@ -75,7 +75,7 @@ class NewBooking extends React.Component {
               BOOK
             </button>
             <Link to="/profile">
-              <button className="new-booking__btn">CANCEL</button>
+              <button className="new-booking__btn">BACK</button>
             </Link>
           </div>
         </form>

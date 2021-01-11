@@ -1,6 +1,7 @@
 const Bookings = require("../models/bookings");
 const Users = require("../models/users");
 const { PrismaClient } = require("@prisma/client");
+const { restart } = require("nodemon");
 const prisma = new PrismaClient();
 
 //get all bookings
@@ -47,9 +48,24 @@ const editBooking = async (req, res) => {
       res.json({ err });
     });
 };
+
+// delete item
+
+const deleteItem = async (req, res) => {
+  await prisma.bookings
+    .delete({ where: { id: parseInt(req.params.id) } })
+    .then((booking) => {
+      res.status(204).json({ msg: `Item with the ID ${booking.id} deleted` });
+    })
+    .catch((err) => {
+      res.status(400).json({ err });
+    });
+};
+
 module.exports = {
   getBookings,
   getUserBookings,
   newBooking,
   editBooking,
+  deleteItem,
 };

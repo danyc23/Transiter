@@ -76,11 +76,16 @@ export default class Edit extends Component {
             ></textarea>
           </div>
           <div className="new-booking__btn-container">
-            <button type="submit" className="new-booking__btn">
-              EDIT
+            <button
+              type="submit"
+              className="new-booking__btn new-booking__btn--top"
+            >
+              SAVE
             </button>
             <Link to="/profile">
-              <button className="new-booking__btn">BACK</button>
+              <button className="new-booking__btn new-booking__btn--bottom">
+                BACK
+              </button>
             </Link>
           </div>
         </form>

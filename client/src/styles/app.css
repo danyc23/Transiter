@@ -1016,6 +1016,10 @@
   .new-booking__container {
     margin-left: 350px;
     margin-right: 350px;
+    -webkit-box-shadow: 3px 3px 3px 3px #aaaaaa;
+            box-shadow: 3px 3px 3px 3px #aaaaaa;
+    border-top: 8px solid #00233d;
+    margin-top: 3rem;
   }
 }
 
@@ -1034,7 +1038,7 @@
 
 @media (min-width: 1440px) {
   .new-booking__title-container {
-    margin-top: 4rem;
+    padding-top: 30px;
     font-size: 24px;
     line-height: 32px;
     font-family: "avenir";
@@ -1076,8 +1080,7 @@
 
 .new-booking__btn {
   display: block;
-  width: 100%;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
   background-color: #00233d;
@@ -1088,11 +1091,22 @@
 
 @media (min-width: 1440px) {
   .new-booking__btn {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 13rem;
     font-size: 16px;
     line-height: 24px;
     font-family: "avenir demi";
+  }
+}
+
+@media (min-width: 1440px) {
+  .new-booking__btn--top {
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .new-booking__btn--bottom {
+    margin-bottom: 15px;
   }
 }
 
@@ -1102,8 +1116,19 @@
 
 @media (min-width: 1440px) {
   .new-booking__btn-container {
-    margin-left: 200px;
-    margin-right: 200px;
+    margin: 0;
+    padding: 10px 0px;
+    background-color: lightgray;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 

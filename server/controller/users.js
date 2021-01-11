@@ -29,7 +29,6 @@ const getUsers = async (req, res) => {
 //     });
 // };
 const getUserWithBookings = async (req, res) => {
-  console.log(req);
   const data = await prisma.users.findUnique({
     where: { id: parseInt(req.params.id) },
     include: { bookings: true },
@@ -43,7 +42,6 @@ const getUserWithBookings = async (req, res) => {
 //create a new user
 
 const createNewUser = async (req, res) => {
-  console.log(req.body);
   const {
     companyName,
     country,
@@ -122,6 +120,7 @@ const loginUser = async (req, res) => {
         // } else {
         //   res.json({ error: "Incorrect password or email" });
         // }
+
         bcrypt.compare(req.body.password, user.password, (err, result) => {
           if (err) {
             throw err;

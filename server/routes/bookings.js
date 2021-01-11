@@ -11,6 +11,8 @@ router.route("/:id").get(controller.getUserBookings);
 
 //create a new booking
 router.route("/:id").post(controller.newBooking);
+//delete a booking
+router.route("/:id").delete(controller.deleteItem);
 
 //update booking
 router.route("/").put(controller.editBooking);

@@ -99,7 +99,7 @@ const createNewUser = async (req, res) => {
 
 const loginUser = async (req, res) => {
   if (!req.body.email || !req.body.password) {
-    res.json({ msg: "Please insert email and password" });
+    res.status(400).json({ msg: "Please insert email and password" });
   } else {
     // Users.where({ email: req.body.email })
     //   .fetch()
@@ -132,12 +132,12 @@ const loginUser = async (req, res) => {
             );
             res.status(200).json({ token, id: user.id });
           } else {
-            res.json({ error: "Incorrect password or email" });
+            res.status(404).json({ error: "Incorrect password or email" });
           }
         });
       })
       .catch((err) => {
-        res.send(err);
+        res.status(500).send(err);
       });
   }
 };

@@ -1118,7 +1118,7 @@
   .new-booking__btn-container {
     margin: 0;
     padding: 10px 0px;
-    background-color: lightgray;
+    background-color: #f2f0f0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

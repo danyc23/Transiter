@@ -9,6 +9,12 @@
       margin-top: 3rem;
     }
   }
+  &__top-section {
+    @include desktop {
+      // display: flex;
+      // justify-content: space-between;
+    }
+  }
   &__title {
     color: $blue;
     &-container {

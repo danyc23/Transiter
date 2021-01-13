@@ -52,23 +52,30 @@ class NewBooking extends React.Component {
           <div className="new-booking__title-container">
             <h2 className="new-booking__title">Book Transit</h2>
           </div>
-          <div>
-            <h4 className="new-booking__label"> Transit dates:</h4>
-            <input
-              onChange={this.handleChange}
-              className="new-booking__input"
-              type="date"
-              name="date"
-            />
-          </div>
-          <div className="container">
-            <h4 className="new-booking__label ">Extra details:</h4>
-            <textarea
-              onChange={this.handleChange}
-              name="description"
-              className="new-booking__input new-booking__input--desc "
-            ></textarea>
-          </div>
+          <section className="new-booking__top-section">
+            <div>
+              <div>
+                <h4 className="new-booking__label"> Transit dates:</h4>
+                <input
+                  onChange={this.handleChange}
+                  className="new-booking__input"
+                  type="date"
+                  name="date"
+                />
+              </div>
+            </div>
+            <div>
+              <div className="container">
+                <h4 className="new-booking__label ">Extra details:</h4>
+                <textarea
+                  onChange={this.handleChange}
+                  name="description"
+                  className="new-booking__input new-booking__input--desc "
+                ></textarea>
+              </div>
+            </div>
+          </section>
+
           <FeesCard />
           <div className="new-booking__btn-container">
             <button type="submit" className="new-booking__btn">

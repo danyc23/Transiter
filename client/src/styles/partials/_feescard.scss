@@ -6,6 +6,7 @@
       color: $blue;
       @include desktop {
         @include tablet-second-header;
+        margin-bottom: 1rem;
       }
     }
   }
@@ -16,9 +17,8 @@
   &-subcontainer {
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
+    margin-top: 0.7rem;
     @include desktop {
-      margin-top: 2rem;
     }
   }
   &-title {

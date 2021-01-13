@@ -16,19 +16,21 @@ function ProfileDetails(props) {
     <section>
       <div className="profile-details">
         <div className="profile-details__content">
-          <div className="company-name__section ">
-            <h3 className="company-name__title profile-title">Company Name</h3>
+          <div className="company-name__section detail__section ">
+            <h3 className="company-name__title profile-title ">
+              Company Name:
+            </h3>
             <p companyName={companyName} className="profile-text">
               {companyName}
             </p>
           </div>
-          <div className="country__section">
-            <h3 className="country__title profile-title">Country</h3>
+          <div className="country__section detail__section">
+            <h3 className="country__title profile-title">Country:</h3>
             <p country={country} className="profile-text">
               {country}
             </p>
           </div>
-          <div className="regNumber__section">
+          <div className="regNumber__section detail__section">
             <h3 className="regNumber__title profile-title">
               Registration Number
             </h3>
@@ -36,14 +38,14 @@ function ProfileDetails(props) {
               {regNumber}
             </p>
           </div>
-          <div className="address__section">
-            <h3 className="address__title profile-title">Address</h3>
+          <div className="address__section detail__section">
+            <h3 className="address__title profile-title">Address:</h3>
             <p address={address} className="profile-text">
               {address}
             </p>
           </div>
-          <div className="phone__section">
-            <h3 className="phone__title profile-title">Phone Number</h3>
+          <div className="phone__section detail__section">
+            <h3 className="phone__title profile-title">Phone Number:</h3>
             <p phone={phone} className="profile-text">
               {phone}
             </p>

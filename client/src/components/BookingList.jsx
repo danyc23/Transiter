@@ -5,7 +5,7 @@ function BookingList(props) {
   return (
     <section>
       <div className="booking-list__main-title-section">
-        <h2 className="booking-list__main-title">Transits</h2>
+        <h2 className="booking-list__main-title">Transits History</h2>
       </div>
 
       <ul>

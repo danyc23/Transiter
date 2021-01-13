@@ -10,6 +10,14 @@
     @include desktop {
       margin-left: 180px;
       margin-right: 180px;
+      justify-content: space-around;
+      background-color: #f2f0f0;
+      border-top: 6px solid $blue;
+    }
+    &__content {
+      @include desktop {
+        width: 290px;
+      }
     }
   }
   &-text {
@@ -34,7 +42,7 @@
   &-title {
     color: $blue;
     @include desktop {
-      font-size: 20px;
+      font-size: 18px;
       line-height: 32px;
       font-family: "avenir";
       font-weight: bold;
@@ -51,7 +59,7 @@
     &__title {
       color: $blue;
       @include desktop {
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
         margin-top: 2rem;
         @include tablet-second-header;
       }
@@ -74,5 +82,18 @@
       @include tablet-sub-header;
       padding: 0.7rem 4rem;
     }
+  }
+}
+.detail__section {
+  @include desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.test {
+  @include desktop {
+    background-color: #f2f0f0;
+    border-top: 6px solid $blue;
   }
 }

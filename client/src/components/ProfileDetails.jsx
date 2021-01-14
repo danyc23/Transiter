@@ -53,6 +53,7 @@ function ProfileDetails(props) {
         </div>
         <div>
           <img className="profile-image" src={ProfileImg} alt="" />
+          <button>Edit Image</button>
         </div>
       </div>
       <div className="new-transit">

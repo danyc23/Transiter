@@ -818,6 +818,8 @@
   .profile-image {
     width: 15rem;
     height: 13rem;
+    display: block;
+    margin-bottom: 0.7rem;
   }
 }
 

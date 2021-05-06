@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 const axios = require("axios");
 
 class Register extends React.Component {

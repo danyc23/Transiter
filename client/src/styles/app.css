@@ -921,6 +921,24 @@
   }
 }
 
+.edit-image {
+  background-color: #00233d;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-family: "avenir demi";
+  border: none;
+}
+
+.edit-image__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .booking {
   margin: 1rem;
   display: -webkit-box;
@@ -1232,8 +1250,12 @@
           box-sizing: border-box;
 }
 
-a {
+a,
+a:hover,
+a:focus,
+a:active {
   text-decoration: none;
+  color: inherit;
 }
 
 ul {

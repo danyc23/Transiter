@@ -99,3 +99,15 @@
     border-top: 6px solid $blue;
   }
 }
+.edit-image {
+  background-color: $blue;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-family: "avenir demi";
+  border: none;
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

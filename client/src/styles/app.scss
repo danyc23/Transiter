@@ -19,8 +19,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-a {
+a,
+a:hover,
+a:focus,
+a:active {
   text-decoration: none;
+  color: inherit;
 }
 ul {
   list-style-type: none;

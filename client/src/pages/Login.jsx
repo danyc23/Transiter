@@ -1,12 +1,12 @@
-import React from "react";
-import Navbar from "../components/Navbar";
-import { Redirect, Link } from "react-router-dom";
-const axios = require("axios");
+import React from 'react';
+import Navbar from '../components/Navbar';
+import { Redirect, Link } from 'react-router-dom';
+const axios = require('axios');
 
 class Login extends React.Component {
   state = {
-    email: "",
-    password: "",
+    email: '',
+    password: '',
     loggedIn: false,
   };
 
@@ -22,10 +22,10 @@ class Login extends React.Component {
       [e.target.name]: e.target.value,
     });
     if (!this.state.email || !this.state.password) {
-      alert("Type password and email ");
+      alert('Type password and email ');
     } else {
       axios
-        .post("http://localhost:5000/users/login", {
+        .post('http://localhost:5001/users/login', {
           email: this.state.email,
           password: this.state.password,
         })
@@ -39,60 +39,60 @@ class Login extends React.Component {
   };
 
   render() {
-    return sessionStorage.getItem("authToken") ? (
-      <Redirect to="/profile" />
+    return sessionStorage.getItem('authToken') ? (
+      <Redirect to='/profile' />
     ) : (
-      <section className="login">
+      <section className='login'>
         <Navbar />
-        <div className="login-main__container">
-          <div className="login-border">
-            <div className="login-title__container">
-              <h1 className="login-title">Login</h1>
+        <div className='login-main__container'>
+          <div className='login-border'>
+            <div className='login-title__container'>
+              <h1 className='login-title'>Login</h1>
             </div>
-            <form className="login-form" onSubmit={this.submitHandler}>
-              <div className="login-container">
-                <label className="login-label" for="email">
+            <form className='login-form' onSubmit={this.submitHandler}>
+              <div className='login-container'>
+                <label className='login-label' for='email'>
                   Email
                 </label>
                 <input
                   onChange={this.changeHandler}
-                  className="login-input"
-                  type="text"
-                  name="email"
-                  id="email"
+                  className='login-input'
+                  type='text'
+                  name='email'
+                  id='email'
                 />
               </div>
-              <div className="login-container">
-                <label className="login-label" for="password">
+              <div className='login-container'>
+                <label className='login-label' for='password'>
                   Password
                 </label>
                 <input
                   onChange={this.changeHandler}
-                  className="login-input"
-                  type="password"
-                  name="password"
-                  id="password"
+                  className='login-input'
+                  type='password'
+                  name='password'
+                  id='password'
                 />
               </div>
-              <div className="login-container login-container--last">
+              <div className='login-container login-container--last'>
                 <div>
-                  <button className="login-btn" type="submit">
+                  <button className='login-btn' type='submit'>
                     Log in
                   </button>
-                  <input type="checkbox" name="remember" />
-                  <label className="login-checkbox__text">Remember me</label>
+                  <input type='checkbox' name='remember' />
+                  <label className='login-checkbox__text'>Remember me</label>
                 </div>
-                <div className="login-container__remember">
+                <div className='login-container__remember'>
                   <div>
-                    <Link to="/">
-                      <button className="login-container__remember-btn">
+                    <Link to='/'>
+                      <button className='login-container__remember-btn'>
                         Cancel
                       </button>
                     </Link>
                   </div>
 
-                  <Link className="nav-link" to="./register">
-                    <p className="login-register__text">Register</p>
+                  <Link className='nav-link' to='./register'>
+                    <p className='login-register__text'>Register</p>
                   </Link>
                 </div>
               </div>

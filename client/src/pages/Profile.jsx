@@ -1,8 +1,8 @@
-import React from "react";
-import axios from "axios";
-import Navbar from "../components/Navbar";
-import BookingList from "../components/BookingList";
-import ProfileDetails from "../components/ProfileDetails";
+import React from 'react';
+import axios from 'axios';
+import Navbar from '../components/Navbar';
+import BookingList from '../components/BookingList';
+import ProfileDetails from '../components/ProfileDetails';
 class Profile extends React.Component {
   state = {
     userData: {},
@@ -11,19 +11,19 @@ class Profile extends React.Component {
 
   componentDidMount() {
     if (
-      sessionStorage.getItem("authToken") &&
-      sessionStorage.getItem("userId")
+      sessionStorage.getItem('authToken') &&
+      sessionStorage.getItem('userId')
     ) {
-      console.log("authToken and userid exists");
-      this.getUser(sessionStorage.getItem("userId"));
+      console.log('authToken and userid exists');
+      this.getUser(sessionStorage.getItem('userId'));
     }
   }
 
   getUser = (id) => {
     axios
-      .get(`http://localhost:5000/users/${id}`, {
+      .get(`http://localhost:5001/users/${id}`, {
         header: {
-          authorization: `BEARER ${sessionStorage.getItem("authToken")}`,
+          authorization: `BEARER ${sessionStorage.getItem('authToken')}`,
         },
       })
       .then((response) => {
@@ -41,8 +41,8 @@ class Profile extends React.Component {
     return (
       <section>
         <Navbar />
-        <div className="profile-main__section">
-          <h1 className="profile-main__title">Profile Information</h1>
+        <div className='profile-main__section'>
+          <h1 className='profile-main__title'>Profile Information</h1>
         </div>
         <ProfileDetails data={this.state.userData} />
         <BookingList list={this.state.bookingList} />

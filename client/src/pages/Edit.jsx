@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import Navbar from "../components/Navbar";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import Navbar from '../components/Navbar';
 
 export default class Edit extends Component {
   state = {
-    date: "",
-    description: "",
+    date: '',
+    description: '',
   };
 
   changeHandler = (e) => {
@@ -17,9 +17,9 @@ export default class Edit extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     if (!this.state.date || !this.state.description) {
-      alert("All spaces must be filled");
+      alert('All spaces must be filled');
     } else {
-      console.log("form-submitted");
+      console.log('form-submitted');
       this.setState({
         [e.target.name]: e.target.value,
       });
@@ -33,7 +33,7 @@ export default class Edit extends Component {
     const { date } = this.state;
     const { description } = this.state;
     axios
-      .put("http://localhost:5000/bookings/", {
+      .put('http://localhost:5001/bookings/', {
         id,
         date,
         description,
@@ -41,8 +41,8 @@ export default class Edit extends Component {
       .then((res) => {
         console.log(res);
         this.setState({
-          date: "",
-          description: "",
+          date: '',
+          description: '',
         });
       })
       .catch((err) => {
@@ -52,38 +52,38 @@ export default class Edit extends Component {
 
   render() {
     return (
-      <section className="new-booking">
+      <section className='new-booking'>
         <Navbar />
-        <form onSubmit={this.handleSubmit} className="new-booking__container">
-          <div className="new-booking__title-container">
-            <h2 className="new-booking__title">Edit Transit</h2>
+        <form onSubmit={this.handleSubmit} className='new-booking__container'>
+          <div className='new-booking__title-container'>
+            <h2 className='new-booking__title'>Edit Transit</h2>
           </div>
           <div>
-            <h4 className="new-booking__label"> Transit dates:</h4>
+            <h4 className='new-booking__label'> Transit dates:</h4>
             <input
               onChange={this.changeHandler}
-              className="new-booking__input"
-              type="date"
-              name="date"
+              className='new-booking__input'
+              type='date'
+              name='date'
             />
           </div>
-          <div className="container">
-            <h4 className="new-booking__label ">Extra details:</h4>
+          <div className='container'>
+            <h4 className='new-booking__label '>Extra details:</h4>
             <textarea
               onChange={this.changeHandler}
-              name="description"
-              className="new-booking__input new-booking__input--desc "
+              name='description'
+              className='new-booking__input new-booking__input--desc '
             ></textarea>
           </div>
-          <div className="new-booking__btn-container">
+          <div className='new-booking__btn-container'>
             <button
-              type="submit"
-              className="new-booking__btn new-booking__btn--top"
+              type='submit'
+              className='new-booking__btn new-booking__btn--top'
             >
               SAVE
             </button>
-            <Link to="/profile">
-              <button className="new-booking__btn new-booking__btn--bottom">
+            <Link to='/profile'>
+              <button className='new-booking__btn new-booking__btn--bottom'>
                 BACK
               </button>
             </Link>
